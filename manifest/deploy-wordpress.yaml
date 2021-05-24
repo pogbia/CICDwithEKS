@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:            
+        - name: wordpress
+          image: pogbia29/mywordpress
+          ports:
+          - containerPort: 80
+          resources:
+          requests:
+            memory: 512M
+          limits:
+            memory: 512M
+          env:
+          - name: WORDPRESS_DB_HOST
+            valueFrom:
+              configMapKeyRef:
+              key: WORDPRESS_DB_HOST
+          - name: WORDPRESS_DB_NAME
+            valueFrom:
+              configMapKeyRef:
+              key: WORDPRESS_DB_NAME
+          - name: WORDPRESS_DB_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+              key: WORDPRESS_DB_PASSWORD
+          - name: WORDPRESS_DB_USER
+            valueFrom:
+              configMapKeyRef:
+              key: WORDPRESS_DB_USER
+          volumeMounts:
+          - mountPath: /www/var/html
+            name: wordpress-contents
+          volumes:
+          - name: wordpress-contents
+            persistentVolumeClaim:
+              claimName: wordpress-pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ebs-sc
