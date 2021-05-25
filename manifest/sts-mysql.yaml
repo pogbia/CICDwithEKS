@@ -39,15 +39,3 @@ spec:
         - name: mysql-db
           persistentVolumeClaim:
             claimName: mysql-pvc
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mysql-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
-  storageClassName: ebs-sc

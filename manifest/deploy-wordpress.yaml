@@ -48,15 +48,3 @@ spec:
           - name: wordpress-contents
             persistentVolumeClaim:
               claimName: wordpress-pvc
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: wordpress-pvc
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 1Gi
-  storageClassName: ebs-sc
