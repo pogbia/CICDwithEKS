@@ -39,7 +39,7 @@ spec:
             configMapKeyRef:
               key: MYSQL_DATABASE
               name: mysql-configmap
-        volumes:
-        - name: mysql-db
-          persistentVolumeClaim:
-            claimName: mysql-pvc
+      volumes:
+      - name: mysql-db
+        persistentVolumeClaim:
+          claimName: mysql-pvc
