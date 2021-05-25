@@ -22,23 +22,23 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             configMapKeyRef:
-            key: MYSQL_ROOT_PASSWORD
-            name: mysql-configmap
+              key: MYSQL_ROOT_PASSWORD
+              name: mysql-configmap
         - name: MYSQL_USER
           valueFrom:
             configMapKeyRef:
-            key: MYSQL_USER
-            name: mysql-configmap
+              key: MYSQL_USER
+              name: mysql-configmap
         - name: MYSQL_PASSWORD
           valueFrom:
             configMapKeyRef:
-            key: MYSQL_PASSWORD
-            name: mysql-configmap
+              key: MYSQL_PASSWORD
+              name: mysql-configmap
         - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
-            key: MYSQL_DATABASE
-            name: mysql-configmap
+              key: MYSQL_DATABASE
+              name: mysql-configmap
         volumes:
         - name: mysql-db
           persistentVolumeClaim:
