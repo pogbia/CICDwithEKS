@@ -57,6 +57,7 @@ managedNodeGroups:
       - ap-northeast-2d
     iam:
       withAddonPolicies:
+        awsLoadBalancerController: true
         autoScaler: true
         albIngress: true
         cloudWatch: true
