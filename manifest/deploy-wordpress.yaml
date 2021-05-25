@@ -19,28 +19,32 @@ spec:
           image: pogbia29/mywordpress
           ports:
           - containerPort: 80
-          resources:
-          requests:
-            memory: 512M
-          limits:
-            memory: 512M
+          # resources:
+          # requests:
+          #   memory: 512M
+          # limits:
+          #   memory: 512M
           env:
           - name: WORDPRESS_DB_HOST
             valueFrom:
               configMapKeyRef:
               key: WORDPRESS_DB_HOST
+              name: wordpress-configmap
           - name: WORDPRESS_DB_NAME
             valueFrom:
               configMapKeyRef:
               key: WORDPRESS_DB_NAME
+              name: wordpress-configmap
           - name: WORDPRESS_DB_PASSWORD
             valueFrom:
               configMapKeyRef:
               key: WORDPRESS_DB_PASSWORD
+              name: wordpress-configmap
           - name: WORDPRESS_DB_USER
             valueFrom:
               configMapKeyRef:
               key: WORDPRESS_DB_USER
+              name: wordpress-configmap
           volumeMounts:
           - mountPath: /www/var/html
             name: wordpress-contents
