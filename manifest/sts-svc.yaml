@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-svc-headless
+  name: mysql-svc
 spec:
   selector:
     app: mysql-sts
-  clusterIP: None
+  #clusterIP: None
   ports:
   - name: mysql-svc
     port: 80
