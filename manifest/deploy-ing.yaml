@@ -13,4 +13,4 @@ spec:
       - path: /
         backend:
           serviceName: wordpress-svc
-          servicePort: 80
+          servicePort: 30113
