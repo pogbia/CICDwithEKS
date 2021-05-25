@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: myapp-svc-headless
 spec:
-  type: NodePort
   selector:
     app: mysql-sts
   clusterIP: None
@@ -11,4 +10,3 @@ spec:
   - name: mysql-svc
     port: 80
     targetPort: 8080
-    nodePort: 30114
