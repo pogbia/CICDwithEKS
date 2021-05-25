@@ -8,7 +8,8 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
 spec:
   rules:
-  - http:
+  - host: www.example.com
+    http:
       paths:
       - path: /
         backend:
