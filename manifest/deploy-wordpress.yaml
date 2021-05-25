@@ -52,3 +52,5 @@ spec:
       - name: wordpress-contents
         persistentVolumeClaim:
           claimName: wordpress-pvc
+      # volumes:
+      # - name: wordpress-contents

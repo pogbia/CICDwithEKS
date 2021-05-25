@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: cicd-eks
+  name: wordpress-deploy
   region: ap-northeast-2
   version: "1.18"
 
@@ -32,11 +32,11 @@ iam:
         namespace: kube-system
       wellKnownPolicies:
         autoScaler: true
-    # - metadata:
-    #     name: efs-csi-controller-sa
-    #     namespace: kube-system
-      # wellKnownPolicies:
-      #   efsCSIController: true
+    - metadata:
+        name: efs-csi-controller-sa
+        namespace: kube-system
+      wellKnownPolicies:
+        efsCSIController: true
     
 # Managed Node Groups
 managedNodeGroups:
@@ -61,7 +61,6 @@ managedNodeGroups:
         albIngress: true
         cloudWatch: true
         ebs: true
-        efs: true
 
 # Fargate Profiles
 # fargateProfiles:
