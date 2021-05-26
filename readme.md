@@ -81,7 +81,7 @@ availabilityZones:
 
 #### 클러스터 구성
 
-![image-20210526203626736](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526203626736.png)
+![image-20210526203626736](/img/image-20210526203626736.png)
 
 - [Deployment](Deployment https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-wordpress.yaml )
   - [Service(NodePort)](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-svc.yaml)
@@ -248,7 +248,7 @@ Argo CD 설정
 
 Argo CD 배포
 
-![image-20210526215004746](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526215004746.png)
+![image-20210526215004746](/img/image-20210526215004746.png)
 
 
 
@@ -269,13 +269,13 @@ wordpress-ing   <none>   *     k8s-default-wordpres-6ea970997d-2047022698.ap-nor
 
 *http://k8s-default-wordpres-6ea970997d-2047022698.ap-northeast-2.elb.amazonaws.com/*
 
-![image-20210526221154634](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526221154634.png)
+![image-20210526221154634](/img/image-20210526221154634.png)
 
 
 
 접속 확인
 
-![image-20210526221442963](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526221442963.png)
+![image-20210526221442963](/img/image-20210526221442963.png)
 
 
 
@@ -310,10 +310,10 @@ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack --namespa
 
 
 
-![image-20210526220227363](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526220227363.png)
+![image-20210526220227363](/img/image-20210526220227363.png)
 
 
 
 
 
-![image-20210526220327287](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526220327287.png)
+![image-20210526220327287](/img/image-20210526220327287.png)
