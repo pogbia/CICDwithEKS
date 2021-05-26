@@ -17,7 +17,7 @@ spec:
       - name: mysql-sts
         image: pogbia29/mydb_mysql
         ports:
-        - containerPort: 8080
+        - containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:

@@ -8,5 +8,5 @@ spec:
   #clusterIP: None
   ports:
   - name: mysql-svc
-    port: 80
-    targetPort: 8080
+    port: 3306
+    targetPort: 3306
