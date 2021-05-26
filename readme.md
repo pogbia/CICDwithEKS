@@ -1,7 +1,5 @@
 # Deploy Application CI/CD pipeline in AWS-EKS
 
-[toc]
-
 Wordpress, MySQL을 이용해 어플리케이션을 만들고, CI/CD 파이프라인으로 AWS(EKS)에 배포합니다.
 
 - Application
