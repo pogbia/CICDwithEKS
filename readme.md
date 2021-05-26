@@ -1,6 +1,6 @@
 # Deploy Application CI/CD pipeline in AWS-EKS
 
-Wordpress, MySQL을 이용해 어플리케이션을 만들고, CI/CD 파이프라인으로 AWS(EKS)에 배포합니다.
+Wordpress, MySQL을 이용해 어플리케이션을 만들고, CI/CD 파이프라인으로 AWS(EKS)에 배포
 
 - Application
   - Wordpress
@@ -28,9 +28,9 @@ Wordpress, MySQL을 이용해 어플리케이션을 만들고, CI/CD 파이프�
 
 ## Application
 
-Wordpress, MySQL을 이용해 어플리케이션을 만듭니다.
-
-각각의 어플리케이션 이미지는 Dockerfile로 작성하였고, Git을 통해 Dockerhub로 이미지를 배포합니다.
+Wordpress, MySQL을 이용한 어플리케이션 생성  
+각각의 어플리케이션 이미지는 Dockerfile로 작성  
+Git을 통해 Dockerhub로 이미지 배포
 
 > 도커 허브 레지스트리
 >
@@ -40,7 +40,7 @@ Wordpress, MySQL을 이용해 어플리케이션을 만듭니다.
 
 
 
-![image-20210526054919252](C:\Users\pogbi\AppData\Roaming\Typora\typora-user-images\image-20210526054919252.png)
+![image-20210526054919252](https://github.com/pogbia/CICDwithEKS/blob/master/img\image-20210526054919252.png)
 
 ## EKS
 
