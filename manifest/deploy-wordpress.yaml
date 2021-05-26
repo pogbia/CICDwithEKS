@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: wordpress
   labels:
@@ -48,10 +48,10 @@ spec:
           volumeMounts:
           - mountPath: /www/var/html
             name: wordpress-contents
-      # volumes:
-      # - name: wordpress-contents
-      #   persistentVolumeClaim:
-      #     claimName: wordpress-pvc
       volumes:
       - name: wordpress-contents
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: wordpress-pvc
+      # volumes:
+      # - name: wordpress-contents
+      #   emptyDir: {}

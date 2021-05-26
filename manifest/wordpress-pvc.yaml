@@ -4,8 +4,8 @@ metadata:
   name: wordpress-pvc
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: efs-sc
+  storageClassName: ebs-sc
