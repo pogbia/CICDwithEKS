@@ -40,7 +40,7 @@ Git을 통해 Dockerhub로 이미지 배포
 
 
 
-![image-20210526054919252](https://github.com/pogbia/CICDwithEKS/blob/master/img\image-20210526054919252.png)
+![image-20210526054919252](CICDwithEKS/blob/master/img\image-20210526054919252.png)
 
 ## EKS
 
