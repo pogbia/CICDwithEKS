@@ -32,11 +32,6 @@ iam:
         namespace: kube-system
       wellKnownPolicies:
         autoScaler: true
-    # - metadata:
-    #     name: efs-csi-controller-sa
-    #     namespace: kube-system
-      # wellKnownPolicies:
-      #   efsCSIController: true
     
 # Managed Node Groups
 managedNodeGroups:
@@ -47,9 +42,6 @@ managedNodeGroups:
     desiredCapacity: 3
     maxSize: 6
     privateNetworking: true
-    #ssh:
-    #  allow: true
-    #  publicKeyPath: ./keypair/myeks.pub
     availabilityZones:
       - ap-northeast-2a
       - ap-northeast-2b
@@ -62,14 +54,6 @@ managedNodeGroups:
         cloudWatch: true
         ebs: true
         efs: true
-
-# Fargate Profiles
-# fargateProfiles:
-#   - name: fg-1
-#     selectors:
-#     - namespace: dev
-#       labels:
-#         env: fargate
 
 # CloudWatch Logging
 cloudWatch:
