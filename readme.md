@@ -83,7 +83,7 @@ availabilityZones:
 
 ![image-20210526203626736](/img/image-20210526203626736.png)
 
-- [Deployment](Deployment https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-wordpress.yaml )
+- [Deployment](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-wordpress.yaml )
   - [Service(NodePort)](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-svc.yaml)
   - [configmap](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/wordpress-configmap.yaml)
   - [PVC](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/wordpress-pvc.yaml)
