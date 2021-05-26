@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /*
         backend:
-          serviceName: "wordpress-svc"
+          serviceName: wordpress-svc
           servicePort: 80
