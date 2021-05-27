@@ -224,28 +224,28 @@ Argo CD 설정
 
 **General**
 
-`Application Name` : [ App-name ]
+`Application Name` : [ your App-name ]
 
-`Project` : [ defalt ]
+`Project` : defalt
 
-`SYNC POLICY` : <Automatic>
+`SYNC POLICY` : Automatic
 
 
 
 **SOURCE**
 
-`Repository URL` : [ git repo url ]
+`Repository URL` : [ your git repo url ]
 
 `Revision` : [ your branch or tag ]
 
-`Path` : [manifest path]
+`Path` : [ your manifest path ]
 
 
 
 **DESTINATION**
-`Cluster URL` : [ https://kubernetes.default.svc ]
+`Cluster URL` : https://kubernetes.default.svc
 
-`Namespace` : [defualt]
+`Namespace` : [ your namespace ]
 
 
 
