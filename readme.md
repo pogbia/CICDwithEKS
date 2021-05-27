@@ -40,7 +40,7 @@ Git을 통해 Dockerhub로 이미지 배포
 
 
 
-![image-20210526054919252](/img/image-20210526054919252.png)
+![image-20210526054919252](https://user-images.githubusercontent.com/37618906/119777117-bc994a80-bf00-11eb-848d-3ff14bc043a4.png)
 
 ## EKS
 
@@ -81,7 +81,7 @@ availabilityZones:
 
 #### 클러스터 구성
 
-![image-20210526203626736](/img/image-20210526203626736.png)
+![image-20210526203626736](https://user-images.githubusercontent.com/37618906/119777118-bc994a80-bf00-11eb-9a74-15b3850764bd.png)
 
 - [Deployment](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-wordpress.yaml )
   - [Service(NodePort)](https://github.com/pogbia/CICDwithEKS/blob/master/manifest/deploy-svc.yaml)
@@ -197,10 +197,13 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 
 
 
-로그인 정보
+초기 로그인 정보
 
 - ID : admin
-- PW : `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
+- PW   
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
 
 
 
@@ -221,9 +224,9 @@ Argo CD 설정
 
 **General**
 
-`Application Name` : <App-name>
+`Application Name` : [ App-name ]
 
-`Project` : <defalt>
+`Project` : [ defalt ]
 
 `SYNC POLICY` : <Automatic>
 
@@ -231,24 +234,24 @@ Argo CD 설정
 
 **SOURCE**
 
-`Repository URL` : <https://github.com/pogbia/CICDwithEKS.git>
+`Repository URL` : [ git repo url ]
 
-`Revision` : <master>
+`Revision` : [ your branch or tag ]
 
-`Path` : <manifest/>
+`Path` : [manifest path]
 
 
 
 **DESTINATION**
-`Cluster URL` : <https://kubernetes.default.svc>
+`Cluster URL` : [ https://kubernetes.default.svc ]
 
-`Namespace` : <defualt>
+`Namespace` : [defualt]
 
 
 
 Argo CD 배포
 
-![image-20210526215004746](/img/image-20210526215004746.png)
+![image-20210526215004746](https://user-images.githubusercontent.com/37618906/119777120-bd31e100-bf00-11eb-8e8f-ee7e6d6f885e.png)
 
 
 
@@ -269,13 +272,13 @@ wordpress-ing   <none>   *     k8s-default-wordpres-6ea970997d-2047022698.ap-nor
 
 *http://k8s-default-wordpres-6ea970997d-2047022698.ap-northeast-2.elb.amazonaws.com/*
 
-![image-20210526221154634](/img/image-20210526221154634.png)
+![image-20210526221154634](https://user-images.githubusercontent.com/37618906/119777125-be630e00-bf00-11eb-8dd6-5ad6e744d673.png)
 
 
 
 접속 확인
 
-![image-20210526221442963](/img/image-20210526221442963.png)
+![image-20210526221442963](https://user-images.githubusercontent.com/37618906/119777129-befba480-bf00-11eb-9d86-22e0c07cdba7.png)
 
 
 
@@ -303,17 +306,17 @@ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack --namespa
 
 
 
-로그인 정보
+초기 로그인 정보
 
 - ID: admin
 - PW: prom-operator
 
 
 
-![image-20210526220227363](/img/image-20210526220227363.png)
+![image-20210526220227363](https://user-images.githubusercontent.com/37618906/119777123-bdca7780-bf00-11eb-9617-f07ab636d364.png)
 
 
 
 
 
-![image-20210526220327287](/img/image-20210526220327287.png)
+![image-20210526220327287](https://user-images.githubusercontent.com/37618906/119777124-be630e00-bf00-11eb-8ce6-42f85196b7e6.png)
